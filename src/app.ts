@@ -1,7 +1,24 @@
-const toppings = ['bacon', 'chilli'];
+const pizza = {
+    name: 'Pepporoni',
+    toppings: ['pepporoni']
+};
 
-const newToppings = ['pepporoni'];
+function order({name: pizzaName, toppings: pizzaToppings}) {
+    // console.log(pizzaName, pizzaToppings)
 
-const allToppings = [...toppings, ...newToppings];
+    return {pizzaName, pizzaToppings};
+}
 
-console.log(allToppings)
+const { pizzaName }  = order(pizza);
+
+const toppings = ['pepporoni', 'bacon', 'chilli'];
+
+const [ first,  second, third ] = toppings;
+
+console.log(first)
+
+function logToppings([first, second, third]: any) {
+    console.log(first, second, third)
+}
+
+logToppings(toppings)
