@@ -1,6 +1,10 @@
-var coupon = 'pizza25';
-function normalizeCoupon(code) {
-    return code.toUpperCase();
+var pizzas = 5;
+function offerDiscount(orders) {
+    return orders >= 3;
 }
-var couponMessage = "Final coupon is " + normalizeCoupon(coupon);
-console.log(couponMessage);
+if (offerDiscount(pizzas)) {
+    console.log("You're entitled to a discount!");
+}
+else {
+    console.log("Order more than 3 pizzas for a discount!");
+}
