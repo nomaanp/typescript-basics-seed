@@ -1,24 +1,9 @@
-const pizza = {
-    name: 'Pepporoni',
-    toppings: ['pepporoni']
-};
+const coupon: string = 'pizza25';
 
-function order({name: pizzaName, toppings: pizzaToppings}) {
-    // console.log(pizzaName, pizzaToppings)
-
-    return {pizzaName, pizzaToppings};
+function normalizeCoupon(code: string): string {
+    return code.toUpperCase();
 }
 
-const { pizzaName }  = order(pizza);
+const couponMessage: string = `Final coupon is ${normalizeCoupon(coupon)}`;
 
-const toppings = ['pepporoni', 'bacon', 'chilli'];
-
-const [ first,  second, third ] = toppings;
-
-console.log(first)
-
-function logToppings([first, second, third]: any) {
-    console.log(first, second, third)
-}
-
-logToppings(toppings)
+console.log(couponMessage);
