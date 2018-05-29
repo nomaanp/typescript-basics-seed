@@ -1,11 +1,10 @@
-let pizza: {name: string; price: number; getName(): string};
+let sizes: number[];
 
-pizza = {
-    name: 'Plain Old Pepperoni',
-    price: 20,
-    getName() {
-        return pizza.name;
-    }
-};
+sizes = [1, 2, 3];
 
-console.log(pizza.getName());
+// Generic Type
+
+let toppings: Array<string>;
+
+toppings = ['pepporoni', 'tomato', 'bacon'];
+
