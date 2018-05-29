@@ -1,10 +1,3 @@
-let sizes: number[];
+let pizza: [string, number, boolean];
 
-sizes = [1, 2, 3];
-
-// Generic Type
-
-let toppings: Array<string>;
-
-toppings = ['pepporoni', 'tomato', 'bacon'];
-
+pizza = ['Pepperoni', 20, true];
