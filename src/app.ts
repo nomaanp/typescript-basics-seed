@@ -1,6 +1,9 @@
-interface Pizza {
-    name: string;
+interface Sizes {
     sizes: string[];
+}
+
+interface Pizza extends Sizes {
+    name: string;
     getAvailableSizes(): string[];    
 };
 
@@ -16,7 +19,7 @@ function createPizza(name: string, sizes: string[]): Pizza {
         sizes,
         getAvailableSizes() {
             return this.sizes;
-        }
+        },
     };
 }
 
