@@ -1,7 +1,11 @@
-let sumOrder1: (price: number, quantity?: number) => number;
+let pizza: {name: string; price: number; getName(): string};
 
-sumOrder1 = (x,y = 1) => x * y;
+pizza = {
+    name: 'Plain Old Pepperoni',
+    price: 20,
+    getName() {
+        return pizza.name;
+    }
+};
 
-const sum = sumOrder1(25);
-
-console.log(`Total Sum: ${sum}`)
+console.log(pizza.getName());
