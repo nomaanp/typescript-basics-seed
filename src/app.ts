@@ -1,4 +1,4 @@
-class Sizes {
+abstract class Sizes {
     constructor(public sizes: string[]) {}
 
     set availableSizes(sizes: string[]) {
@@ -9,6 +9,8 @@ class Sizes {
         return this.sizes;
     }
 }
+
+new Sizes(['small']);
 
 /*const sizes = new Sizes(['small', 'medium']);
 
